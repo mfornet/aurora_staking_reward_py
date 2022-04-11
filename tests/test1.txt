@@ -1,0 +1,15 @@
+# Simple test
+
+stake alice 10
+stake bob 20
+
+-- 10
+create-stream usdt 100
+(100, 0), (200, 0), (100, 1000)
+
+-- 20
+claim alice usdt
+assert 100 / 3
+
+-- 31
+reward bob near
